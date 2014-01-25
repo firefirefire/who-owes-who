@@ -15,7 +15,7 @@
 - (void) didCancelCreatingTab;
 @end
 
-@interface AddTabViewController : UIViewController
+@interface AddTabViewController : UIViewController <UITextFieldDelegate>
 
 - (IBAction)addButtonClicked;
 - (IBAction)cancelButtonClicked;

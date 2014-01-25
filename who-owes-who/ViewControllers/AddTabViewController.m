@@ -23,6 +23,17 @@
     return self;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.nameField) {
+        [self.amountOwedField becomeFirstResponder];
+    } else if (textField == self.amountOwedField) {
+        [self createAndSendTab];
+    }
+    return NO;
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -34,6 +45,11 @@
 }
 
 - (IBAction)addButtonClicked
+{
+    [self createAndSendTab];
+}
+
+- (void)createAndSendTab
 {
     Tab *tab = [[Tab alloc] initWithPersonName:self.nameField.text];
     if (self.amountOwedField.text.length > 0) {
