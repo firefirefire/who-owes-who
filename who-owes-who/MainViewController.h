@@ -8,6 +8,9 @@
 
 
 
-@interface MainViewController : UIViewController
+#define CELL_IDENTIFIER @"CellIdentifier"
+
+@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 
 @end
