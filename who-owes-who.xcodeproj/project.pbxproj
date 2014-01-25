@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36F7B4B8D6DA03890B13A817 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F7B2C141F710122AB9315E /* MainViewController.xib */; };
+		36F7B9A3C02CF011A154D844 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F7BFEE76E5552A60187014 /* MainViewController.m */; };
 		6317C50FB6BA880858669DE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CDD762B372C006C14D1E /* UIKit.framework */; };
 		6317C5A521EABD04DD4B486E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6317CB178D9385AAED4B5A48 /* InfoPlist.strings */; };
 		6317C8AD9574E901E4781B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CCFAF0489A18862686C9 /* Foundation.framework */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36F7B2C141F710122AB9315E /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		36F7BED7A6E3F570C8369525 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		36F7BFEE76E5552A60187014 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		6317C07CA9D87E776F5F2EA2 /* who-owes-whoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "who-owes-whoTests-Info.plist"; sourceTree = "<group>"; };
 		6317C142C3995E8A39AC24F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6317C16470A249AA13546147 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -99,6 +104,9 @@
 				6317CF2A2C4D29C7B132EAEB /* AppDelegate.h */,
 				6317C142C3995E8A39AC24F4 /* AppDelegate.m */,
 				6317CAD23AEBDA811FA7E5DA /* Images.xcassets */,
+				36F7BED7A6E3F570C8369525 /* MainViewController.h */,
+				36F7BFEE76E5552A60187014 /* MainViewController.m */,
+				36F7B2C141F710122AB9315E /* MainViewController.xib */,
 			);
 			path = "who-owes-who";
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 			files = (
 				6317CFA43DFF7FA32BA6BF8F /* InfoPlist.strings in Resources */,
 				6317CD47E43BAEA8397E79FB /* Images.xcassets in Resources */,
+				36F7B4B8D6DA03890B13A817 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +244,7 @@
 			files = (
 				6317C90B6019C9DBE6F2AA18 /* main.m in Sources */,
 				6317CBE572BB8AC8E0EC62D3 /* AppDelegate.m in Sources */,
+				36F7B9A3C02CF011A154D844 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
