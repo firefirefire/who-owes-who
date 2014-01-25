@@ -10,6 +10,8 @@
 
 #define CELL_IDENTIFIER @"CellIdentifier"
 
+static const int LABEL_TAG = 0;
+
 @interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 
