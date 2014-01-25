@@ -7,6 +7,8 @@
 //
 
 #import "MainViewController.h"
+#import "AddTabViewController.h"
+#import "Tab.h"
 
 @interface MainViewController ()
 
@@ -19,7 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.tableData = [NSMutableArray array];
+        self.tabs = [NSMutableArray array];
     }
     return self;
 }
@@ -38,7 +40,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.tableData.count;
+    return self.tabs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -46,24 +48,44 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
     }
-    cell.textLabel.text = self.tableData[indexPath.row];
+    Tab *tab = self.tabs[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ $%.02f", tab.personName, tab.amountOwed];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIAlertView *alertView = [[UIAlertView alloc]
-               initWithTitle:@"YOU CLICKED"
-                     message:[NSString stringWithFormat:@"Number %d", indexPath.row]
-                    delegate:self
-             cancelButtonTitle:@"Cancel"
-             otherButtonTitles:nil];
-    [alertView show];
+    return YES;
 }
 
-- (IBAction)plusButtonClicked {
-    [self.tableData addObject:[NSString stringWithFormat:@"Number %d", self.tableData.count]];
-    [self.mainTableView reloadData];
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.tabs removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath]
+                         withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
+
+
+- (IBAction)plusButtonClicked {
+    AddTabViewController *controller = [[AddTabViewController alloc] initWithNibName:@"AddTabViewController" bundle:nil];
+    controller.delegate = self;
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)didCreateTab:(Tab *)tab
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.tabs addObject:tab];
+    [self.tableView reloadData];
+}
+
+- (void)didCancelCreatingTab
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

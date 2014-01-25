@@ -8,13 +8,15 @@
 
 
 
+#import "AddTabViewController.h"
+
 #define CELL_IDENTIFIER @"CellIdentifier"
 
 static const int LABEL_TAG = 0;
 
-@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, TabCreatorDelegate>
 - (IBAction)plusButtonClicked;
-@property (weak, nonatomic) IBOutlet UITableView *mainTableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) NSMutableArray *tableData;
+@property (nonatomic, strong) NSMutableArray *tabs;
 @end
