@@ -19,6 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.tableData = [NSMutableArray array];
     }
     return self;
 }
@@ -37,7 +38,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return self.tableData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -45,9 +46,24 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"Number %d", indexPath.row];
+    cell.textLabel.text = self.tableData[indexPath.row];
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIAlertView *alertView = [[UIAlertView alloc]
+               initWithTitle:@"YOU CLICKED"
+                     message:[NSString stringWithFormat:@"Number %d", indexPath.row]
+                    delegate:self
+             cancelButtonTitle:@"Cancel"
+             otherButtonTitles:nil];
+    [alertView show];
+}
+
+- (IBAction)plusButtonClicked {
+    [self.tableData addObject:[NSString stringWithFormat:@"Number %d", self.tableData.count]];
+    [self.mainTableView reloadData];
+}
 
 @end

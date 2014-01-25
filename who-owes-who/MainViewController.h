@@ -13,6 +13,8 @@
 static const int LABEL_TAG = 0;
 
 @interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+- (IBAction)plusButtonClicked;
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 
+@property (nonatomic, strong) NSMutableArray *tableData;
 @end
