@@ -10,4 +10,13 @@
 
 @implementation Tab
 
+- (id)initWithDescription:(NSString *)desc andAmount:(double)tab
+{
+    self = [super init];
+    if (self) {
+        self.description = desc;
+        self.amount = tab;
+    }
+    return self;
+}
 @end

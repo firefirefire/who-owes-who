@@ -22,7 +22,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.tabs = [NSMutableArray array];
+        self.persons = [NSMutableArray array];
     }
     return self;
 }
@@ -46,7 +46,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.tabs.count;
+    return self.persons.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,7 +54,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
     }
-    Person *tab = self.tabs[indexPath.row];
+    Person *tab = self.persons[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ $%.02f", tab.personName, tab.amountOwed];
     return cell;
 }
@@ -68,7 +68,7 @@
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.tabs removeObjectAtIndex:indexPath.row];
+        [self.persons removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath]
                          withRowAnimation:UITableViewRowAnimationAutomatic];
     }
@@ -85,7 +85,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)didCreatePerson:(Person *)tab
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-    [self.tabs addObject:tab];
+    [self.persons addObject:tab];
     [self.tableView reloadData];
 }
 
@@ -96,8 +96,10 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    Person * myPerson = [self.persons objectAtIndex:indexPath.row];
     EditPersonViewController *controller = [[EditPersonViewController alloc] initWithNibName:@"EditPersonViewController"
-                                                                                bundle:nil];
+                                                                                      bundle:Nil
+                                                                                  withPerson:myPerson];
     [self.navigationController pushViewController:controller animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

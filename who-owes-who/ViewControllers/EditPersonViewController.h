@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Person.h"
 
 @interface EditPersonViewController : UIViewController
+
+- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+            withPerson:(Person * )person;
+@property (weak, nonatomic) IBOutlet UILabel *personName;
+@property (weak, nonatomic) IBOutlet UILabel *totalOwed;
+@property (nonatomic, weak) Person * person;
 
 @end

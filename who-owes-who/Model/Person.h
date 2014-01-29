@@ -4,6 +4,7 @@
 
 
 #import <Foundation/Foundation.h>
+#import "Tab.h"
 
 
 @interface Person : NSObject
@@ -11,6 +12,11 @@
 @property (nonatomic, assign) double amountOwed;
 @property (nonatomic, strong) NSMutableArray *tabs;
 
-- (instancetype)initWithPersonName:(NSString *)personName;
+- (id)initWithPersonName:(NSString *)personName;
+
+- (NSString *) getPersonName;
+- (double) getAmountOwed;
+
+- (void)addTabWithDescription:(NSString *)desc andTabAmount:(double)amount;
 
 @end

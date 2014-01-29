@@ -10,4 +10,9 @@
 
 @interface Tab : NSObject
 
+@property (nonatomic, strong) NSString * description;
+@property (nonatomic, assign) double amount;
+
+- (id)initWithDescription:(NSString *)desc andAmount:(double)tab;
+
 @end

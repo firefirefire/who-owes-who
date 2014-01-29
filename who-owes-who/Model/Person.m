@@ -12,17 +12,30 @@
 
 
 
-- (instancetype)initWithPersonName:(NSString *)personName
+- (id)initWithPersonName:(NSString *)personName
 {
     self = [super init];
     if (self) {
         self.personName = personName;
-        self.amountOwed = 0.0;
+        self.amountOwed = 5.0;
+        self.tabs = [NSMutableArray alloc];
     }
-
     return self;
 }
 
+- (NSString *) getPersonName
+{
+    return self.personName;
+}
 
+- (double) getAmountOwed
+{
+    return self.amountOwed;
+}
+
+- (void)addTabWithDescription:(NSString *)desc andTabAmount:(double)amount
+{
+    
+}
 
 @end

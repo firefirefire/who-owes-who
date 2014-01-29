@@ -28,9 +28,18 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+        self.person = person;
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.personName.text = [self.person getPersonName];
+    double owed = [self.person getAmountOwed];
+    NSNumber * myDoubleNumber = [NSNumber numberWithDouble:owed];
+    self.totalOwed.text = [myDoubleNumber stringValue];
+    self.totalOwed.text = [NSString stringWithFormat:@" $%.02f", [self.person getAmountOwed]];
 }
 
 - (void)viewDidLoad

@@ -18,5 +18,5 @@ static const int LABEL_TAG = 0;
 - (IBAction)plusButtonClicked;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) NSMutableArray *tabs;
+@property (nonatomic, strong) NSMutableArray *persons;
 @end
