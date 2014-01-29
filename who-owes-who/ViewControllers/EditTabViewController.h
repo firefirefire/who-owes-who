@@ -1,13 +1,13 @@
 //
-//  Tab.h
+//  EditTabViewController.h
 //  who-owes-who
 //
 //  Created by Kevin McGaire on 1/28/2014.
 //  Copyright (c) 2014 Mitchell van der Hoeff. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface Tab : NSObject
+@interface EditTabViewController : UIViewController
 
 @end

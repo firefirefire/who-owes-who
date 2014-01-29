@@ -7,19 +7,18 @@
 //
 
 
-@class Tab;
+@class Person;
 
 @protocol TabCreatorDelegate
 @required
-- (void) didCreateTab:(Tab *)tab;
-- (void) didCancelCreatingTab;
+- (void) didCreatePerson:(Person *)tab;
+- (void) didCancelCreatingPerson;
 @end
 
-@interface AddTabViewController : UIViewController <UITextFieldDelegate>
+@interface AddPersonViewController : UIViewController <UITextFieldDelegate>
 
 - (IBAction)addButtonClicked;
 - (IBAction)cancelButtonClicked;
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
-@property (strong, nonatomic) IBOutlet UITextField *amountOwedField;
 @property (weak, nonatomic) id<TabCreatorDelegate> delegate;
 @end

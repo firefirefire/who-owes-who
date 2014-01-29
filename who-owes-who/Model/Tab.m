@@ -1,28 +1,13 @@
 //
-// Created by Mitchell Van Der Hoeff on 1/24/2014.
+//  Tab.m
+//  who-owes-who
 //
-
+//  Created by Kevin McGaire on 1/28/2014.
+//  Copyright (c) 2014 Mitchell van der Hoeff. All rights reserved.
+//
 
 #import "Tab.h"
 
-
-@implementation Tab {
-
-}
-
-
-
-- (instancetype)initWithPersonName:(NSString *)personName
-{
-    self = [super init];
-    if (self) {
-        self.personName = personName;
-        self.amountOwed = 0.0;
-    }
-
-    return self;
-}
-
-
+@implementation Tab
 
 @end

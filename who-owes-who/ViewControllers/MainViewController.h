@@ -8,7 +8,7 @@
 
 
 
-#import "AddTabViewController.h"
+#import "AddPersonViewController.h"
 
 #define CELL_IDENTIFIER @"CellIdentifier"
 

@@ -7,8 +7,9 @@
 //
 
 #import "MainViewController.h"
-#import "AddTabViewController.h"
-#import "Tab.h"
+#import "AddPersonViewController.h"
+#import "EditTabViewController.h"
+#import "Person.h"
 
 @interface MainViewController ()
 
@@ -48,7 +49,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
     }
-    Tab *tab = self.tabs[indexPath.row];
+    Person *tab = self.tabs[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ $%.02f", tab.personName, tab.amountOwed];
     return cell;
 }
@@ -70,22 +71,30 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
 
 - (IBAction)plusButtonClicked {
-    AddTabViewController *controller = [[AddTabViewController alloc] initWithNibName:@"AddTabViewController" bundle:nil];
+    AddPersonViewController *controller = [[AddPersonViewController alloc] initWithNibName:@"AddPersonViewController"
+                                                                                    bundle:nil];
     controller.delegate = self;
     [self presentViewController:controller animated:YES completion:nil];
 }
 
-- (void)didCreateTab:(Tab *)tab
+- (void)didCreatePerson:(Person *)tab
 {
     [self dismissViewControllerAnimated:YES completion:nil];
     [self.tabs addObject:tab];
     [self.tableView reloadData];
 }
 
-- (void)didCancelCreatingTab
+- (void)didCancelCreatingPerson
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    EditTabViewController *controller = [[EditTabViewController alloc] initWithNibName:@"EditPersonViewController"
+                                                                                bundle:nil];
+    NSLog(@"yolo");
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 @end

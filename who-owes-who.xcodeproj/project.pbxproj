@@ -7,24 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6317C2A6EB3865969AE3E1FF /* Model in Resources */ = {isa = PBXBuildFile; fileRef = 6317C137E8513C9E9667D8C3 /* Model */; };
 		6317C50FB6BA880858669DE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CDD762B372C006C14D1E /* UIKit.framework */; };
 		6317C5A521EABD04DD4B486E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6317CB178D9385AAED4B5A48 /* InfoPlist.strings */; };
-		6317C609C0857A655E3BE554 /* AddTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317CC689473BBEFE48916E9 /* AddTabViewController.m */; };
-		6317C8953F3238D3A7C60EF5 /* Tab.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317CACAF0D3003D86635545 /* Tab.m */; };
+		6317C609C0857A655E3BE554 /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317CC689473BBEFE48916E9 /* AddPersonViewController.m */; };
 		6317C8AD9574E901E4781B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CCFAF0489A18862686C9 /* Foundation.framework */; };
 		6317C90B6019C9DBE6F2AA18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317CC65C475BB5B5D092F8F /* main.m */; };
 		6317C9FE924B2B349DBE26E4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317CF804DA2949708DC4460 /* MainViewController.m */; };
 		6317CBD869AF71BA9E670F75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CCFAF0489A18862686C9 /* Foundation.framework */; };
 		6317CBE572BB8AC8E0EC62D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317C142C3995E8A39AC24F4 /* AppDelegate.m */; };
 		6317CBFFC0413264396479B2 /* who_owes_whoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317CB3DB6853160C69DBAC5 /* who_owes_whoTests.m */; };
-		6317CC06F023213ACA7517D6 /* AddTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6317CCAD92C5A25CFFF0090C /* AddTabViewController.xib */; };
+		6317CC06F023213ACA7517D6 /* AddPersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6317CCAD92C5A25CFFF0090C /* AddPersonViewController.xib */; };
 		6317CCF893F8663A1DB5FA64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CDD762B372C006C14D1E /* UIKit.framework */; };
 		6317CD0374986DAB9B010AFC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317C16470A249AA13546147 /* XCTest.framework */; };
 		6317CD47E43BAEA8397E79FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6317CAD23AEBDA811FA7E5DA /* Images.xcassets */; };
 		6317CD8BAF607D91E8AE630E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CBE52A2D209AFC95004B /* CoreGraphics.framework */; };
 		6317CEDAD50BBDF238370746 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6317CC791EB4FA67D810C63A /* MainViewController.xib */; };
 		6317CFA43DFF7FA32BA6BF8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6317CEC6647B02D453788F15 /* InfoPlist.strings */; };
+		E5907F2B18988E7600C597EB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907F2A18988E7600C597EB /* Person.m */; };
+		E5907F2F18988FA500C597EB /* EditTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907F2D18988FA500C597EB /* EditTabViewController.m */; };
+		E5907F3018988FA500C597EB /* EditTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5907F2E18988FA500C597EB /* EditTabViewController.xib */; };
+		E5907F33189894D900C597EB /* Tab.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907F32189894D900C597EB /* Tab.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		6317C07CA9D87E776F5F2EA2 /* who-owes-whoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "who-owes-whoTests-Info.plist"; sourceTree = "<group>"; };
-		6317C137E8513C9E9667D8C3 /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
 		6317C142C3995E8A39AC24F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6317C16470A249AA13546147 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6317C5B1F036EB4E6864DF90 /* who-owes-who-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "who-owes-who-Prefix.pch"; sourceTree = "<group>"; };
@@ -47,22 +48,27 @@
 		6317C773D6D5BD67B9DA3A91 /* who-owes-whoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "who-owes-whoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6317C880C9525CDC08F808A0 /* who-owes-who-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "who-owes-who-Info.plist"; sourceTree = "<group>"; };
 		6317CA89A0DE842151378C91 /* who-owes-who.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "who-owes-who.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6317CACAF0D3003D86635545 /* Tab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab.m; sourceTree = "<group>"; };
 		6317CAD23AEBDA811FA7E5DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6317CB3DB6853160C69DBAC5 /* who_owes_whoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = who_owes_whoTests.m; sourceTree = "<group>"; };
 		6317CBE52A2D209AFC95004B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6317CC65C475BB5B5D092F8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6317CC689473BBEFE48916E9 /* AddTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTabViewController.m; sourceTree = "<group>"; };
+		6317CC689473BBEFE48916E9 /* AddPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPersonViewController.m; sourceTree = "<group>"; };
 		6317CC791EB4FA67D810C63A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		6317CCAD92C5A25CFFF0090C /* AddTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTabViewController.xib; sourceTree = "<group>"; };
+		6317CCAD92C5A25CFFF0090C /* AddPersonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPersonViewController.xib; sourceTree = "<group>"; };
 		6317CCF892EDBA9899DBAF81 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		6317CCFAF0489A18862686C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6317CD8C69A279F5AF30CAA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6317CD9BA366A7CB03AF07D4 /* AddTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTabViewController.h; sourceTree = "<group>"; };
+		6317CD9BA366A7CB03AF07D4 /* AddPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPersonViewController.h; sourceTree = "<group>"; };
 		6317CDD762B372C006C14D1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6317CE18FF6DBBFEB7D988D7 /* Tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab.h; sourceTree = "<group>"; };
 		6317CF2A2C4D29C7B132EAEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6317CF804DA2949708DC4460 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E5907F2918988E7600C597EB /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E5907F2A18988E7600C597EB /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		E5907F2C18988FA500C597EB /* EditTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTabViewController.h; sourceTree = "<group>"; };
+		E5907F2D18988FA500C597EB /* EditTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTabViewController.m; sourceTree = "<group>"; };
+		E5907F2E18988FA500C597EB /* EditTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditTabViewController.xib; sourceTree = "<group>"; };
+		E5907F31189894D900C597EB /* Tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab.h; sourceTree = "<group>"; };
+		E5907F32189894D900C597EB /* Tab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,13 +116,12 @@
 		6317C238A2A2B441397F5713 /* who-owes-who */ = {
 			isa = PBXGroup;
 			children = (
+				E5907F2818988E7600C597EB /* Model */,
 				6317CCB36829EB845102975E /* Supporting Files */,
 				6317CF2A2C4D29C7B132EAEB /* AppDelegate.h */,
 				6317C142C3995E8A39AC24F4 /* AppDelegate.m */,
 				6317CAD23AEBDA811FA7E5DA /* Images.xcassets */,
 				6317CE3ED80BC82A6D160DD6 /* ViewControllers */,
-				6317C137E8513C9E9667D8C3 /* Model */,
-				6317C5074C387E95BECABC72 /* Model */,
 			);
 			path = "who-owes-who";
 			sourceTree = "<group>";
@@ -142,15 +147,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		6317C5074C387E95BECABC72 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6317CACAF0D3003D86635545 /* Tab.m */,
-				6317CE18FF6DBBFEB7D988D7 /* Tab.h */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		6317CCB36829EB845102975E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,9 +164,12 @@
 				6317CCF892EDBA9899DBAF81 /* MainViewController.h */,
 				6317CF804DA2949708DC4460 /* MainViewController.m */,
 				6317CC791EB4FA67D810C63A /* MainViewController.xib */,
-				6317CD9BA366A7CB03AF07D4 /* AddTabViewController.h */,
-				6317CC689473BBEFE48916E9 /* AddTabViewController.m */,
-				6317CCAD92C5A25CFFF0090C /* AddTabViewController.xib */,
+				E5907F2C18988FA500C597EB /* EditTabViewController.h */,
+				E5907F2D18988FA500C597EB /* EditTabViewController.m */,
+				E5907F2E18988FA500C597EB /* EditTabViewController.xib */,
+				6317CD9BA366A7CB03AF07D4 /* AddPersonViewController.h */,
+				6317CC689473BBEFE48916E9 /* AddPersonViewController.m */,
+				6317CCAD92C5A25CFFF0090C /* AddPersonViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -182,6 +181,17 @@
 				6317C773D6D5BD67B9DA3A91 /* who-owes-whoTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E5907F2818988E7600C597EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5907F2918988E7600C597EB /* Person.h */,
+				E5907F2A18988E7600C597EB /* Person.m */,
+				E5907F31189894D900C597EB /* Tab.h */,
+				E5907F32189894D900C597EB /* Tab.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +273,9 @@
 			files = (
 				6317CFA43DFF7FA32BA6BF8F /* InfoPlist.strings in Resources */,
 				6317CD47E43BAEA8397E79FB /* Images.xcassets in Resources */,
+				E5907F3018988FA500C597EB /* EditTabViewController.xib in Resources */,
 				6317CEDAD50BBDF238370746 /* MainViewController.xib in Resources */,
-				6317C2A6EB3865969AE3E1FF /* Model in Resources */,
-				6317CC06F023213ACA7517D6 /* AddTabViewController.xib in Resources */,
+				6317CC06F023213ACA7517D6 /* AddPersonViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5907F2F18988FA500C597EB /* EditTabViewController.m in Sources */,
+				E5907F33189894D900C597EB /* Tab.m in Sources */,
 				6317C90B6019C9DBE6F2AA18 /* main.m in Sources */,
 				6317CBE572BB8AC8E0EC62D3 /* AppDelegate.m in Sources */,
 				6317C9FE924B2B349DBE26E4 /* MainViewController.m in Sources */,
-				6317C8953F3238D3A7C60EF5 /* Tab.m in Sources */,
-				6317C609C0857A655E3BE554 /* AddTabViewController.m in Sources */,
+				6317C609C0857A655E3BE554 /* AddPersonViewController.m in Sources */,
+				E5907F2B18988E7600C597EB /* Person.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +472,7 @@
 				6317C6BD266588E3E4BD5E20 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6317C33B58C1F77CC48292D2 /* Build configuration list for PBXProject "who-owes-who" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +490,7 @@
 				6317C904A9E42BBD037D4823 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
