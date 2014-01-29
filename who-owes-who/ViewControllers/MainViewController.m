@@ -99,6 +99,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     EditPersonViewController *controller = [[EditPersonViewController alloc] initWithNibName:@"EditPersonViewController"
                                                                                 bundle:nil];
     [self.navigationController pushViewController:controller animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

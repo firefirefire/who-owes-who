@@ -7,6 +7,7 @@
 //
 
 #import "EditPersonViewController.h"
+#import "Person.h"
 
 @interface EditPersonViewController ()
 
@@ -22,10 +23,29 @@
     return self;
 }
 
+- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+            withPerson:(Person * )person
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:20.0];
+    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor blueColor];
+    self.navigationItem.titleView = label;
+    label.text = NSLocalizedString(@"Edit Person", @"");
+    [label sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning
