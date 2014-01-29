@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import "AddPersonViewController.h"
-#import "EditTabViewController.h"
+#import "EditPersonViewController.h"
 #import "Person.h"
 
 @interface MainViewController ()
@@ -31,6 +31,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,9 +96,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    EditTabViewController *controller = [[EditTabViewController alloc] initWithNibName:@"EditPersonViewController"
+    EditPersonViewController *controller = [[EditPersonViewController alloc] initWithNibName:@"EditPersonViewController"
                                                                                 bundle:nil];
-    NSLog(@"yolo");
     [self.navigationController pushViewController:controller animated:YES];
 }
 

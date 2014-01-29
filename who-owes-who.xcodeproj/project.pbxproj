@@ -24,8 +24,8 @@
 		6317CEDAD50BBDF238370746 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6317CC791EB4FA67D810C63A /* MainViewController.xib */; };
 		6317CFA43DFF7FA32BA6BF8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6317CEC6647B02D453788F15 /* InfoPlist.strings */; };
 		E5907F2B18988E7600C597EB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907F2A18988E7600C597EB /* Person.m */; };
-		E5907F2F18988FA500C597EB /* EditTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907F2D18988FA500C597EB /* EditTabViewController.m */; };
-		E5907F3018988FA500C597EB /* EditTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5907F2E18988FA500C597EB /* EditTabViewController.xib */; };
+		E5907F2F18988FA500C597EB /* EditPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907F2D18988FA500C597EB /* EditPersonViewController.m */; };
+		E5907F3018988FA500C597EB /* EditPersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5907F2E18988FA500C597EB /* EditPersonViewController.xib */; };
 		E5907F33189894D900C597EB /* Tab.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907F32189894D900C597EB /* Tab.m */; };
 /* End PBXBuildFile section */
 
@@ -64,9 +64,9 @@
 		6317CF804DA2949708DC4460 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		E5907F2918988E7600C597EB /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		E5907F2A18988E7600C597EB /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		E5907F2C18988FA500C597EB /* EditTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTabViewController.h; sourceTree = "<group>"; };
-		E5907F2D18988FA500C597EB /* EditTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTabViewController.m; sourceTree = "<group>"; };
-		E5907F2E18988FA500C597EB /* EditTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditTabViewController.xib; sourceTree = "<group>"; };
+		E5907F2C18988FA500C597EB /* EditPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPersonViewController.h; sourceTree = "<group>"; };
+		E5907F2D18988FA500C597EB /* EditPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPersonViewController.m; sourceTree = "<group>"; };
+		E5907F2E18988FA500C597EB /* EditPersonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPersonViewController.xib; sourceTree = "<group>"; };
 		E5907F31189894D900C597EB /* Tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab.h; sourceTree = "<group>"; };
 		E5907F32189894D900C597EB /* Tab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,9 +164,9 @@
 				6317CCF892EDBA9899DBAF81 /* MainViewController.h */,
 				6317CF804DA2949708DC4460 /* MainViewController.m */,
 				6317CC791EB4FA67D810C63A /* MainViewController.xib */,
-				E5907F2C18988FA500C597EB /* EditTabViewController.h */,
-				E5907F2D18988FA500C597EB /* EditTabViewController.m */,
-				E5907F2E18988FA500C597EB /* EditTabViewController.xib */,
+				E5907F2C18988FA500C597EB /* EditPersonViewController.h */,
+				E5907F2D18988FA500C597EB /* EditPersonViewController.m */,
+				E5907F2E18988FA500C597EB /* EditPersonViewController.xib */,
 				6317CD9BA366A7CB03AF07D4 /* AddPersonViewController.h */,
 				6317CC689473BBEFE48916E9 /* AddPersonViewController.m */,
 				6317CCAD92C5A25CFFF0090C /* AddPersonViewController.xib */,
@@ -273,7 +273,7 @@
 			files = (
 				6317CFA43DFF7FA32BA6BF8F /* InfoPlist.strings in Resources */,
 				6317CD47E43BAEA8397E79FB /* Images.xcassets in Resources */,
-				E5907F3018988FA500C597EB /* EditTabViewController.xib in Resources */,
+				E5907F3018988FA500C597EB /* EditPersonViewController.xib in Resources */,
 				6317CEDAD50BBDF238370746 /* MainViewController.xib in Resources */,
 				6317CC06F023213ACA7517D6 /* AddPersonViewController.xib in Resources */,
 			);
@@ -286,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5907F2F18988FA500C597EB /* EditTabViewController.m in Sources */,
+				E5907F2F18988FA500C597EB /* EditPersonViewController.m in Sources */,
 				E5907F33189894D900C597EB /* Tab.m in Sources */,
 				6317C90B6019C9DBE6F2AA18 /* main.m in Sources */,
 				6317CBE572BB8AC8E0EC62D3 /* AppDelegate.m in Sources */,

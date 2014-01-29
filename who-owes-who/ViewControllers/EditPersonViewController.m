@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Mitchell van der Hoeff. All rights reserved.
 //
 
-#import "EditTabViewController.h"
+#import "EditPersonViewController.h"
 
-@interface EditTabViewController ()
+@interface EditPersonViewController ()
 
 @end
 
-@implementation EditTabViewController
+@implementation EditPersonViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)didReceiveMemoryWarning

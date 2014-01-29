@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditTabViewController : UIViewController
+@interface EditPersonViewController : UIViewController
 
 @end
