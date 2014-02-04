@@ -19,6 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.title = @"Add Person";
     }
     return self;
 }
@@ -40,7 +41,12 @@
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)addButtonClicked
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self.nameField becomeFirstResponder];
+}
+
+- (void)addButtonClicked
 {
     [self createAndSendTab];
 }
@@ -58,11 +64,8 @@
     }
     Person *person = [[Person alloc] initWithPersonName:self.nameField.text];
     [self.delegate didCreatePerson:person];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (IBAction)cancelButtonClicked
-{
-    [self.delegate didCancelCreatingPerson];
-}
 
 @end

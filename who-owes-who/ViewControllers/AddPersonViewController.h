@@ -12,13 +12,11 @@
 @protocol TabCreatorDelegate
 @required
 - (void) didCreatePerson:(Person *)tab;
-- (void) didCancelCreatingPerson;
 @end
 
 @interface AddPersonViewController : UIViewController <UITextFieldDelegate>
 
-- (IBAction)addButtonClicked;
-- (IBAction)cancelButtonClicked;
+- (void)addButtonClicked;
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) id<TabCreatorDelegate> delegate;
 @end

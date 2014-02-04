@@ -29,6 +29,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.person = person;
+        NSMutableString *title = [[NSMutableString alloc] initWithString:@"Edit "];
+        [title appendString:[person getPersonName]];
+        self.navigationItem.title = title ;
     }
     return self;
 }
@@ -40,21 +43,13 @@
     NSNumber * myDoubleNumber = [NSNumber numberWithDouble:owed];
     self.totalOwed.text = [myDoubleNumber stringValue];
     self.totalOwed.text = [NSString stringWithFormat:@" $%.02f", [self.person getAmountOwed]];
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont boldSystemFontOfSize:20.0];
-    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor blueColor];
-    self.navigationItem.titleView = label;
-    label.text = NSLocalizedString(@"Edit Person", @"");
-    [label sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning

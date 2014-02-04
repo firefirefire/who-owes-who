@@ -23,6 +23,12 @@
     if (self) {
         // Custom initialization
         self.persons = [NSMutableArray array];
+        self.title = @"Who Owns Who";
+        UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(plusButtonClicked)];
+        self.navigationItem.rightBarButtonItem = anotherButton;
+        [anotherButton setTitleTextAttributes:@{
+                       NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:25.0f],
+                       } forState:UIControlStateNormal];
     }
     return self;
 }
@@ -30,12 +36,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,7 +86,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     AddPersonViewController *controller = [[AddPersonViewController alloc] initWithNibName:@"AddPersonViewController"
                                                                                     bundle:nil];
     controller.delegate = self;
-    [self presentViewController:controller animated:YES completion:nil];
+    [self.navigationController pushViewController:controller animated:YES];
+
 }
 
 - (void)didCreatePerson:(Person *)tab
@@ -89,10 +97,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     [self.tableView reloadData];
 }
 
-- (void)didCancelCreatingPerson
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
