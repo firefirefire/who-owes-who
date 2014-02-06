@@ -24,9 +24,9 @@
         // Custom initialization
         self.persons = [NSMutableArray array];
         self.title = @"Who Owns Who";
-        UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(plusButtonClicked)];
-        self.navigationItem.rightBarButtonItem = anotherButton;
-        [anotherButton setTitleTextAttributes:@{
+        UIBarButtonItem *plusButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(plusButtonClicked)];
+        self.navigationItem.rightBarButtonItem = plusButton;
+        [plusButton setTitleTextAttributes:@{
                        NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:25.0f],
                        } forState:UIControlStateNormal];
     }

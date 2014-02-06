@@ -14,6 +14,7 @@
 
 - (id)initWithPersonName:(NSString *)personName;
 
+- (NSArray *) getTabs;
 - (NSString *) getPersonName;
 - (double) getAmountOwed;
 

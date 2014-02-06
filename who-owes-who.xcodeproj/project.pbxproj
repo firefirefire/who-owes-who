@@ -23,6 +23,8 @@
 		6317CD8BAF607D91E8AE630E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6317CBE52A2D209AFC95004B /* CoreGraphics.framework */; };
 		6317CEDAD50BBDF238370746 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6317CC791EB4FA67D810C63A /* MainViewController.xib */; };
 		6317CFA43DFF7FA32BA6BF8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6317CEC6647B02D453788F15 /* InfoPlist.strings */; };
+		E51813C818A2E61800949C2E /* AddTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51813C618A2E61800949C2E /* AddTabViewController.m */; };
+		E51813C918A2E61800949C2E /* AddTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E51813C718A2E61800949C2E /* AddTabViewController.xib */; };
 		E5907F2B18988E7600C597EB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907F2A18988E7600C597EB /* Person.m */; };
 		E5907F2F18988FA500C597EB /* EditPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907F2D18988FA500C597EB /* EditPersonViewController.m */; };
 		E5907F3018988FA500C597EB /* EditPersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5907F2E18988FA500C597EB /* EditPersonViewController.xib */; };
@@ -62,6 +64,9 @@
 		6317CDD762B372C006C14D1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6317CF2A2C4D29C7B132EAEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6317CF804DA2949708DC4460 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E51813C518A2E61800949C2E /* AddTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTabViewController.h; sourceTree = "<group>"; };
+		E51813C618A2E61800949C2E /* AddTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTabViewController.m; sourceTree = "<group>"; };
+		E51813C718A2E61800949C2E /* AddTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTabViewController.xib; sourceTree = "<group>"; };
 		E5907F2918988E7600C597EB /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		E5907F2A18988E7600C597EB /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		E5907F2C18988FA500C597EB /* EditPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPersonViewController.h; sourceTree = "<group>"; };
@@ -161,6 +166,9 @@
 		6317CE3ED80BC82A6D160DD6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E51813C518A2E61800949C2E /* AddTabViewController.h */,
+				E51813C618A2E61800949C2E /* AddTabViewController.m */,
+				E51813C718A2E61800949C2E /* AddTabViewController.xib */,
 				6317CCF892EDBA9899DBAF81 /* MainViewController.h */,
 				6317CF804DA2949708DC4460 /* MainViewController.m */,
 				6317CC791EB4FA67D810C63A /* MainViewController.xib */,
@@ -276,6 +284,7 @@
 				6317CD47E43BAEA8397E79FB /* Images.xcassets in Resources */,
 				E5907F3018988FA500C597EB /* EditPersonViewController.xib in Resources */,
 				6317CEDAD50BBDF238370746 /* MainViewController.xib in Resources */,
+				E51813C918A2E61800949C2E /* AddTabViewController.xib in Resources */,
 				6317CC06F023213ACA7517D6 /* AddPersonViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51813C818A2E61800949C2E /* AddTabViewController.m in Sources */,
 				E5907F2F18988FA500C597EB /* EditPersonViewController.m in Sources */,
 				E5907F33189894D900C597EB /* Tab.m in Sources */,
 				6317C90B6019C9DBE6F2AA18 /* main.m in Sources */,

@@ -4,6 +4,7 @@
 
 
 #import "Person.h"
+#import "Tab.h"
 
 
 @implementation Person {
@@ -18,7 +19,9 @@
     if (self) {
         self.personName = personName;
         self.amountOwed = 5.0;
-        self.tabs = [NSMutableArray alloc];
+        self.tabs = [[NSMutableArray alloc] init];
+        Tab * test = [[Tab alloc] initWithDescription:@"Test" andAmount:10.0];
+        [self.tabs addObject:test];
     }
     return self;
 }
@@ -26,6 +29,11 @@
 - (NSString *) getPersonName
 {
     return self.personName;
+}
+
+- (NSArray *) getTabs
+{
+    return self.tabs;
 }
 
 - (double) getAmountOwed

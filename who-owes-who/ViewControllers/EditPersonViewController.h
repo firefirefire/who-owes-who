@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *personName;
 @property (weak, nonatomic) IBOutlet UILabel *totalOwed;
 @property (nonatomic, weak) Person * person;
+@property (weak, nonatomic) IBOutlet UITableView *tabsTableView;
 
 @end
