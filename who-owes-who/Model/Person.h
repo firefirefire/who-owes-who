@@ -19,5 +19,6 @@
 - (double) getAmountOwed;
 
 - (void)addTabWithDescription:(NSString *)desc andTabAmount:(double)amount;
+- (void)updateBalance;
 
 @end

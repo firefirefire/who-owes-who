@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AddTabViewController : UIViewController
+- (IBAction)addTabButtonClicked;
+@property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
+@property (weak, nonatomic) IBOutlet UITextField *amountTextField;
 
+@property (weak, nonatomic) IBOutlet UIButton *addTab;
 @end

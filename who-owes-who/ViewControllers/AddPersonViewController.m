@@ -63,6 +63,7 @@
         return;
     }
     Person *person = [[Person alloc] initWithPersonName:self.nameField.text];
+    [person updateBalance];
     [self.delegate didCreatePerson:person];
     [self.navigationController popViewControllerAnimated:YES];
 }

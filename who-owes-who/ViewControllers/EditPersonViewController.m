@@ -8,6 +8,7 @@
 
 #import "EditPersonViewController.h"
 #import "Person.h"
+#import "AddTabViewController.h"
 
 #define CELL_IDENTIFIER @"CellIdentifier"
 
@@ -48,6 +49,7 @@
     NSMutableString * nameOwes = [[NSMutableString alloc] initWithString:[self.person getPersonName]];
     [nameOwes appendString:@" Owes"];
     self.personName.text = nameOwes;
+    [self.person updateBalance];
     double owed = [self.person getAmountOwed];
     NSNumber * myDoubleNumber = [NSNumber numberWithDouble:owed];
     self.totalOwed.text = [myDoubleNumber stringValue];
@@ -63,7 +65,8 @@
 
 - (void) plusButtonClicked
 {
-    
+    AddTabViewController * nextController = [[AddTabViewController alloc] initWithNibName:@"AddTabViewController" bundle:nil];
+    [self presentViewController:nextController animated:YES completion:Nil];
 }
 
 - (void)didReceiveMemoryWarning

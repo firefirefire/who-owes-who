@@ -7,6 +7,7 @@
 //
 
 #import "AddTabViewController.h"
+#import "tab.h"
 
 @interface AddTabViewController ()
 
@@ -35,6 +36,37 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if ( textField == self.descriptionTextField ) {
+        [self.amountTextField becomeFirstResponder];
+    } else {
+        [self addTabButtonClicked];
+    }
+    return NO;
+}
 
 
+- (IBAction)addTabButtonClicked
+{
+    if (self.descriptionTextField.text.length == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Name Inputted"
+                                                        message:@"Please Input a Description"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    } else if (self.amountTextField.text.length == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Name Inputted"
+                                                        message:@"Please Input an Amount"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

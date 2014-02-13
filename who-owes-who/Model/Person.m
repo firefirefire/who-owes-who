@@ -18,7 +18,7 @@
     self = [super init];
     if (self) {
         self.personName = personName;
-        self.amountOwed = 5.0;
+        self.amountOwed = 0;
         self.tabs = [[NSMutableArray alloc] init];
         Tab * test = [[Tab alloc] initWithDescription:@"Test" andAmount:10.0];
         [self.tabs addObject:test];
@@ -44,6 +44,15 @@
 - (void)addTabWithDescription:(NSString *)desc andTabAmount:(double)amount
 {
     
+}
+
+- (void) updateBalance
+{
+    int sum = 0;
+    for (Tab * tab in self.tabs ){
+        sum += tab.amount;
+    }
+    self.amountOwed = sum;
 }
 
 @end
