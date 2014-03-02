@@ -14,7 +14,7 @@
 
 static const int LABEL_TAG = 0;
 
-@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, TabCreatorDelegate>
+@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, PersonCreatorDelegate>
 - (IBAction)plusButtonClicked;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

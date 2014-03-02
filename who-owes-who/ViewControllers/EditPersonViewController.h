@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Person.h"
+#import "AddTabViewController.h"
 
-@interface EditPersonViewController : UIViewController
+
+@interface EditPersonViewController : UIViewController<TabCreatorDelegate>
 
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
             withPerson:(Person * )person;

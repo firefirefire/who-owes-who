@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tab.h"
+
+@protocol TabCreatorDelegate
+@required
+- (void)didAddPayment:(Tab *)tab;
+@end
 
 @interface AddTabViewController : UIViewController
 - (IBAction)addTabButtonClicked;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UITextField *amountTextField;
-
+@property (weak, nonatomic) id<TabCreatorDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIButton *addTab;
 @end

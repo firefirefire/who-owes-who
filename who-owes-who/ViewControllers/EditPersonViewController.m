@@ -35,11 +35,12 @@
         NSMutableString *title = [[NSMutableString alloc] initWithString:@"Edit "];
         [title appendString:[person getPersonName]];
         self.navigationItem.title = title ;
-        UIBarButtonItem *plusButton = [[UIBarButtonItem alloc] initWithTitle:@"Add Payment" style:UIBarButtonItemStylePlain target:self action:@selector(plusButtonClicked)];
+        UIBarButtonItem *plusButton = [[UIBarButtonItem alloc] initWithTitle:@"Add Payment" style:UIBarButtonItemStylePlain target:self action:@selector(addPaymentButtonClicked)];
         self.navigationItem.rightBarButtonItem = plusButton;
         [plusButton setTitleTextAttributes:@{
             NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:15.0f],
         } forState:UIControlStateNormal];
+        [self addObserver:self forKeyPath:@"person.tabs" options:0 context:NULL];
     }
     return self;
 }
@@ -50,11 +51,16 @@
     [nameOwes appendString:@" Owes"];
     self.personName.text = nameOwes;
     [self.person updateBalance];
-    double owed = [self.person getAmountOwed];
-    NSNumber * myDoubleNumber = [NSNumber numberWithDouble:owed];
-    self.totalOwed.text = [myDoubleNumber stringValue];
     self.totalOwed.text = [NSString stringWithFormat:@" $%.02f", [self.person getAmountOwed]];
+}
 
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    [self.person updateBalance];
+    [self.view setNeedsDisplay];
 }
 
 - (void)viewDidLoad
@@ -63,9 +69,10 @@
     [self.navigationController setNavigationBarHidden:NO];
 }
 
-- (void) plusButtonClicked
+- (void) addPaymentButtonClicked
 {
     AddTabViewController * nextController = [[AddTabViewController alloc] initWithNibName:@"AddTabViewController" bundle:nil];
+    nextController.delegate = self;
     [self presentViewController:nextController animated:YES completion:Nil];
 }
 
@@ -88,6 +95,14 @@
     Tab * cellTab = [self.person getTabs][indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ $%.02f", cellTab.description, cellTab.amount];
     return cell;
+}
+
+
+- (void)didAddPayment:(Tab *)tab
+{
+    [self.person.tabs addObject:tab];
+    [self.tabsTableView reloadData];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

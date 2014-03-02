@@ -9,14 +9,14 @@
 
 @class Person;
 
-@protocol TabCreatorDelegate
+@protocol PersonCreatorDelegate
 @required
-- (void) didCreatePerson:(Person *)tab;
+- (void) didCreatePerson:(Person *)person;
 @end
 
 @interface AddPersonViewController : UIViewController <UITextFieldDelegate>
 
 - (void)addButtonClicked;
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
-@property (weak, nonatomic) id<TabCreatorDelegate> delegate;
+@property (weak, nonatomic) id<PersonCreatorDelegate> delegate;
 @end

@@ -66,7 +66,10 @@
         [alert show];
         return;
     }
-    
+    NSString * desc = self.descriptionTextField.text;
+    double amount = [self.amountTextField.text doubleValue];
+    Tab * newTab = [[Tab alloc] initWithDescription:desc andAmount:amount];
+    [self.delegate didAddPayment:newTab];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

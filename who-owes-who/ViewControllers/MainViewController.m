@@ -90,10 +90,9 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
 }
 
-- (void)didCreatePerson:(Person *)tab
+- (void)didCreatePerson:(Person *)person
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [self.persons addObject:tab];
+    [self.persons addObject:person];
     [self.tableView reloadData];
 }
 
